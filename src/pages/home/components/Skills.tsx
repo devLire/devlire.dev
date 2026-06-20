@@ -30,7 +30,7 @@ export const Skills = ({ id }: Props) => {
             </div>
 
             {/* Secondary Skills */}
-            <div className="flex w-full max-w-2xl flex-wrap items-center justify-center gap-6 md:gap-8">
+            <div className="flex w-full max-w-3xl flex-wrap items-center justify-center gap-6 md:gap-8">
               {secondarySkills.map((skill) => (
                 <SkillItem
                   key={skill.title}

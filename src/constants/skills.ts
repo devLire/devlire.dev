@@ -49,6 +49,11 @@ export const secondarySkills: Skill[] = [
     iconColor: 'bg-[#453A34]',
   },
   {
+    title: 'Axios',
+    src: '/svgs/axios.svg',
+    iconColor: 'bg-[#5a29e4]',
+  },
+  {
     title: 'Node.js',
     src: '/svgs/nodedotjs.svg',
     iconColor: 'bg-[#5FA04E]',
