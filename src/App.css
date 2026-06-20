@@ -182,3 +182,52 @@
     border-right-color: var(--border);
   }
 }
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.status-badge {
+  position: relative;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.status-badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* grosor del borde */
+  border-radius: inherit;
+
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0deg,
+    transparent 320deg,
+    #10b981 350deg,
+    transparent 360deg
+  );
+
+  animation: border-rotate 3s linear infinite;
+
+  /* Muestra solo el borde */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+@keyframes border-rotate {
+  to {
+    --angle: 360deg;
+  }
+}

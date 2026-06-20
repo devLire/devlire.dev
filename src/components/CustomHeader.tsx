@@ -21,6 +21,7 @@ import { cn } from '@/lib/utils';
 import { routesList } from '@/constants/routes.ts';
 import type { NavItem } from '@/constants/routes.ts';
 import { DevLire } from './DevLire';
+import { handleContactClick } from '@/handlers/handleContactClick';
 
 const SiteLogo = () => (
   <Link
@@ -98,8 +99,8 @@ const DesktopNav = ({ items }: { items: NavItem[] }) => {
 
 const MobileSheet = ({ items }: { items: NavItem[] }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const handleContactClick = () => {
-    window.open('https://www.linkedin.com/in/baruc-alejandria/', '_blank');
+  const handleMobileContactClick = () => {
+    handleContactClick();
     setIsOpen(false);
   };
 
@@ -188,7 +189,7 @@ const MobileSheet = ({ items }: { items: NavItem[] }) => {
                 'border border-emerald-500/20 bg-emerald-500/10 text-emerald-400 backdrop-blur-md',
                 'hover:border-emerald-400/40 hover:bg-emerald-500/20 hover:text-emerald-300 hover:shadow-[0_0_15px_rgba(16,185,129,0.2)]'
               )}
-              onClick={handleContactClick}
+              onClick={handleMobileContactClick}
             >
               Contáctame
             </Button>
@@ -254,12 +255,7 @@ export const CustomHeader = () => {
               'border border-emerald-500/20 bg-emerald-500/10 text-emerald-400 backdrop-blur-md',
               'hover:border-emerald-400/40 hover:bg-emerald-500/20 hover:text-emerald-300'
             )}
-            onClick={() =>
-              window.open(
-                'https://www.linkedin.com/in/baruc-alejandria/',
-                '_blank'
-              )
-            }
+            onClick={handleContactClick}
           >
             Contáctame
           </Button>

@@ -27,7 +27,7 @@ export const CustomFooter = () => {
               Desarrollador{' '}
               <span className="font-medium text-emerald-500">Frontend</span>{' '}
               enfocado en construir aplicaciones web y móviles{' '}
-              <span className="font-medium text-emerald-500">eficientes</span> ,{' '}
+              <span className="font-medium text-emerald-500">eficientes, </span>
               <span className="font-medium text-emerald-500">escalables</span> y
               con excelente{' '}
               <span className="font-medium text-emerald-500">
