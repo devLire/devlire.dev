@@ -1,75 +1,58 @@
-# React + TypeScript + Vite
+# Personal Portfolio — Baruc Alejandria (devLire)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido al repositorio de mi portafolio personal. Este proyecto fue diseñado y desarrollado desde cero para consolidar mi marca personal, mi trayectoria académica y exhibir mis proyectos de ingeniería de software.
 
-Currently, two official plugins are available:
+La aplicación es una Single Page Application (SPA) construida con prácticas modernas de maquetación, arquitectura modular y tipado estricto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Stack Tecnológico
 
-## React Compiler
+- **Core:** React 19 + TypeScript
+- **Empaquetador:** Vite 8
+- **Enrutamiento:** React Router (Data Router)
+- **Estilos & UI:** Tailwind CSS v4 + shadcn/ui
+- **Iconografía:** Lucide React + Simple Icons (Máscaras CSS estables)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 🔒 Aviso de Licencia y Propiedad Intelectual (Copyright)
 
-## Expanding the ESLint configuration
+⚠️ **POR FAVOR, LEA ESTO ANTES DE CLONAR O DE RENOVAR SU PORTAFOLIO:**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+© 2026 Baruc Alejandria. Todos los derechos reservados.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Este repositorio contiene mi portafolio personal y único. El código fuente se publica **únicamente con fines demostrativos, de auditoría técnica y revisión de portafolio por parte de reclutadores o empresas**.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **No está permitido** copiar, duplicar ni distribuir el diseño visual, la disposición de los componentes ni la estructura identitaria de este sitio.
+- **No está permitido** utilizar este código totalmente, para crear portafolios derivados, sitios comerciales o plantillas públicas sin mi autorización expresa por escrito.
+- **No está permitido** el uso de mi marca personal (`devLire`), textos descriptivos, imágenes personales, o contenido de proyectos para fines ajenos a la evaluación de mi perfil profesional.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Agradezco profundamente tu respeto por el trabajo, las horas de diseño y el esfuerzo invertido en este desarrollo. Si buscas inspiración, te invito a estudiar la arquitectura de componentes.
+
+---
+
+## 🏗️ Estructura del Proyecto
+
+El proyecto sigue una arquitectura de componentes limpia y totalmente atomizada:
+
+- `/src/components`: Componentes UI globales y reutilizables (`CustomCard`, `CustomBadge`, etc.).
+- `/src/constants`: Abstracción de datos planos (`skills.ts`, `projects.ts`, `education.ts`) para un escalado ágil.
+- `/src/pages`: Secciones modulares del Home Page (`Hero`, `Skills`, `Projects`, `AboutMe`, `EducationAndCertifications`).
+
+---
+
+## ⚡ Desarrollo Local
+
+Si eres un reclutador y deseas auditar el rendimiento o la compilación del sitio en tu entorno local:
+
+1. Clonar el repositorio.
+2. Instalar las dependencias estrictamente con `pnpm`:
+
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Levantar el servidor de desarrollo local:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm dev
 ```
