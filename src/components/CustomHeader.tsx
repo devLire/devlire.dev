@@ -168,7 +168,7 @@ const MobileSheet = ({ items }: { items: NavItem[] }) => {
                 <Link
                   className={cn(
                     'border-b border-transparent py-2 text-lg font-bold text-white transition-all duration-300',
-                    'inline-block w-max hover:border-emerald-500/30 hover:text-emerald-400'
+                    'block w-full hover:border-emerald-500/30 hover:text-emerald-400'
                   )}
                   to={item.to ?? '/'}
                   onClick={() => setIsOpen(false)}

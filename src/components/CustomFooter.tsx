@@ -84,7 +84,7 @@ export const CustomFooter = () => {
                     </div>
                   ) : (
                     <Link
-                      className="inline-block text-sm transition-all duration-200 hover:translate-x-1 hover:text-emerald-400"
+                      className="flex w-full py-0.5 text-sm transition-all duration-200 hover:translate-x-1 hover:text-emerald-400"
                       to={link.to ?? '/'}
                     >
                       {link.text}
