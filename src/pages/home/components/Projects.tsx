@@ -10,7 +10,7 @@ export const Projects = ({ id }: BaseSectionProps) => {
     <SectionLayout id={id}>
       <SectionTitle icon={Terminal} text="Proyectos" />
 
-      <div className="mx-auto mt-10 flex max-w-5xl flex-col items-center gap-12 2xl:max-w-6xl">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-12 lg:mt-10 2xl:max-w-6xl">
         <div className="flex w-full flex-wrap items-center justify-center gap-12 md:gap-20">
           {projects.map((project) => (
             <ProjectItem
