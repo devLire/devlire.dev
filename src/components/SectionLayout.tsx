@@ -10,7 +10,7 @@ export const SectionLayout = ({ id, children, className }: Props) => {
   return (
     <section
       className={cn(
-        'relative flex w-full scroll-mt-20 items-center justify-center overflow-hidden py-20 text-white md:py-12 2xl:py-32',
+        'relative flex w-full scroll-mt-20 items-center justify-center overflow-hidden py-12 text-white md:py-16 2xl:py-20',
         className
       )}
       id={id}
