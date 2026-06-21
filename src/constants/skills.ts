@@ -78,6 +78,18 @@ export const tailwindCssSkill: Skill = {
   iconColor: 'bg-[#06B6D4]',
 };
 
+export const prismaSkill: Skill = {
+  title: 'Prisma ORM',
+  src: '/svgs/prisma.svg',
+  iconColor: 'bg-[#2D3748]',
+};
+
+export const postgreSQLSkill: Skill = {
+  title: 'PostgreSQL',
+  src: '/svgs/postgresql.svg',
+  iconColor: 'bg-[#4169E1]',
+};
+
 export const cleanCodePrinciple: Skill = {
   title: 'Código Limpio',
   src: '/svgs/prettier.svg',
@@ -113,6 +125,8 @@ export const secondarySkills: Skill[] = [
   nodeJsSkill,
   shadcnUiSkill,
   tailwindCssSkill,
+  prismaSkill,
+  postgreSQLSkill,
 ];
 
 export const principlesList: Skill[] = [
