@@ -80,7 +80,7 @@ const DesktopNav = ({ items }: { items: NavItem[] }) => {
             ) : (
               <Link
                 className={cn(
-                  'cursor-pointer bg-transparent font-medium text-white transition-all duration-300',
+                  'cursor-pointer bg-transparent text-sm font-medium text-white transition-all duration-300',
                   'inline-flex items-center justify-center rounded-full border border-transparent px-4 py-2',
                   'hover:border-white/10 hover:bg-white/5 hover:text-emerald-400 hover:shadow-sm hover:backdrop-blur-md',
                   'focus-visible:ring-ring/30 outline-none focus:bg-white/5 focus-visible:ring-3 focus-visible:outline-1'
