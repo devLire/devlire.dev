@@ -24,10 +24,10 @@ export const routesList: NavItem[] = [
   },
   {
     text: 'Sobre mí',
-    to: '#about-me',
+    to: '/#about-me',
   },
   {
     text: 'Educación y Certificados',
-    to: '#education-and-certifications',
+    to: '/#education-and-certifications',
   },
 ];

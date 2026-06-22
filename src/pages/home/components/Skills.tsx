@@ -10,7 +10,7 @@ export const Skills = ({ id }: BaseSectionProps) => {
     <SectionLayout id={id}>
       <SectionTitle icon={Brain} text="Habilidades" />
 
-      <div className="flex w-full max-w-3xl flex-col items-center gap-12">
+      <div className="flex w-full max-w-4xl flex-col items-center gap-12 xl:max-w-7xl">
         {/* Primary Skills */}
         <div className="flex w-full flex-wrap items-center justify-center gap-8 md:gap-12">
           {primarySkills.map((skill) => (
@@ -19,7 +19,7 @@ export const Skills = ({ id }: BaseSectionProps) => {
         </div>
 
         {/* Secondary Skills */}
-        <div className="flex w-full max-w-3xl flex-wrap items-center justify-center gap-6 md:gap-8">
+        <div className="flex w-full max-w-4xl flex-wrap items-center justify-center gap-6 md:gap-8 xl:max-w-7xl">
           {secondarySkills.map((skill) => (
             <SkillItem key={skill.title} className="text-sm" skill={skill} />
           ))}
