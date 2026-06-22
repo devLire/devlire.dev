@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Cpu } from 'lucide-react';
+import { ArrowRight, Code2, Cpu } from 'lucide-react';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { CustomBadge } from '@/components/CustomBadge';
 import { SectionLayout } from '@/components/SectionLayout';
@@ -13,6 +13,9 @@ import {
   type CarouselApi,
 } from '@/components/ui/carousel';
 import { FreshGif } from '@/components/FreshGifs';
+import { githubSkill } from '@/constants/skills';
+import { Button } from '@/components/ui/button';
+import { ProjectActions } from '@/components/ProjectActions';
 
 const slideVariants: Variants = {
   enter: (direction: number) => ({
@@ -138,6 +141,8 @@ export const HeroTechLogistics = ({ id }: BaseSectionProps) => {
               automatización, gestión transaccional de inventarios y auditoría
               biométrica de accesos de operarios.
             </p>
+
+            <ProjectActions isProjectPage project={techLogisticsProject} />
           </div>
         </div>
 
