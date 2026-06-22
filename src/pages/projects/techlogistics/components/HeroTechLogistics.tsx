@@ -1,6 +1,5 @@
-import { useMemo, useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Cpu } from 'lucide-react';
-import Autoplay from 'embla-carousel-autoplay';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { CustomBadge } from '@/components/CustomBadge';
 import { SectionLayout } from '@/components/SectionLayout';
@@ -40,11 +39,13 @@ const SLIDES_DATA = [
     id: 'app',
     src: '/projects/techlogistics/techlogistics-app-demo.gif',
     alt: 'TechLogistics App Móvil',
+    duration: 8730,
   },
   {
     id: 'web',
     src: '/projects/techlogistics/techlogistics-web-demo.gif',
     alt: 'TechLogistics Web',
+    duration: 10470,
   },
 ];
 
@@ -61,16 +62,7 @@ export const HeroTechLogistics = ({ id }: BaseSectionProps) => {
   const swipeDirection = useRef(1);
   const resetTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const autoplayPlugin = useMemo(
-    () =>
-      Autoplay({
-        delay: 10000,
-        stopOnInteraction: false,
-        stopOnMouseEnter: true,
-      }),
-    []
-  );
-
+  // Sincroniza el estado local de React con el índice activo y la dirección de Embla Carousel.
   useEffect(() => {
     if (!api) return;
 
@@ -90,6 +82,20 @@ export const HeroTechLogistics = ({ id }: BaseSectionProps) => {
       api.off('select', syncState);
     };
   }, [api]);
+
+  // Ejecuta un temporizador para avanzar automáticamente al siguiente slide usando un poco menos de la duración del GIF actual.
+  useEffect(() => {
+    if (!api) return;
+
+    const currentSlide = SLIDES_DATA[page];
+    if (!currentSlide) return;
+
+    const timer = setTimeout(() => {
+      api.scrollNext();
+    }, currentSlide.duration);
+
+    return () => clearTimeout(timer);
+  }, [api, page]);
 
   return (
     <SectionLayout id={id}>
@@ -157,12 +163,7 @@ export const HeroTechLogistics = ({ id }: BaseSectionProps) => {
               }, 400);
             }}
           >
-            <Carousel
-              className="w-full"
-              opts={{ loop: true }}
-              plugins={[autoplayPlugin]}
-              setApi={setApi}
-            >
+            <Carousel className="w-full" opts={{ loop: true }} setApi={setApi}>
               <CarouselContent className="h-[380px] sm:h-[460px] lg:h-[540px] xl:h-[580px]">
                 <CarouselItem className="h-full w-full" />
                 <CarouselItem className="h-full w-full" />
