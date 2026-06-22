@@ -5,9 +5,10 @@ import { cn } from '@/lib/utils';
 
 interface Props {
   skill: Skill;
+  className?: string;
 }
 
-export const CustomBadge = ({ skill }: Props) => {
+export const CustomBadge = ({ skill, className }: Props) => {
   const { isScaled, handleMouseEnter, handleMouseLeave } =
     useHoverScaleAnimation();
   const hexColor = skill.iconColor.match(/\[(#[A-Fa-f0-9]{6})\]/)?.[1];
@@ -16,7 +17,8 @@ export const CustomBadge = ({ skill }: Props) => {
     <Badge
       className={cn(
         'cursor-default gap-2 transition-transform duration-150 select-none',
-        isScaled && 'scale-105'
+        isScaled && 'scale-105',
+        className
       )}
       style={{
         backgroundColor: hexColor ? `${hexColor}1A` : undefined,
@@ -27,7 +29,7 @@ export const CustomBadge = ({ skill }: Props) => {
       onMouseLeave={handleMouseLeave}
     >
       <div
-        className={`h-[1em] w-[1em] ${skill.iconColor}`}
+        className={`h-[1em] w-[1em] shrink-0 ${skill.iconColor}`}
         style={{
           maskImage: `url(${skill.src})`,
           WebkitMaskImage: `url(${skill.src})`,

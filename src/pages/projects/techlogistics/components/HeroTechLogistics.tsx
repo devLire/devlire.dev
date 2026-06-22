@@ -4,7 +4,7 @@ import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { CustomBadge } from '@/components/CustomBadge';
 import { SectionLayout } from '@/components/SectionLayout';
 import { SectionTitle } from '@/components/SectionTitle';
-import { techLogisticsProject } from '@/constants/projects';
+import { techLogisticsProject } from '@/constants/projects/techlogistics';
 import type { BaseSectionProps } from '@/types';
 import {
   Carousel,

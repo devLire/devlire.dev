@@ -1,9 +1,11 @@
 import { HeroTechLogistics } from './components/HeroTechLogistics';
+import { TechLogisticsTabs } from './components/TechLogisticsTabs';
 
 const TechLogisticsPage = () => {
   return (
     <>
-      <HeroTechLogistics />
+      <HeroTechLogistics id="hero" />
+      <TechLogisticsTabs id="tabs" />
     </>
   );
 };

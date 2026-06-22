@@ -1,7 +1,7 @@
 import { CustomBadge } from '@/components/CustomBadge';
 import { CustomCard } from '@/components/CustomCard';
 import { Button } from '@/components/ui/button';
-import type { Project } from '@/constants/projects';
+import type { Project } from '@/types/projects.interface';
 import { githubSkill } from '@/constants/skills';
 import { useHoverScaleAnimation } from '@/hooks/useHoverScaleAnimation';
 import { cn } from '@/lib/utils';

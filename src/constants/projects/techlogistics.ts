@@ -51,6 +51,49 @@ export const techLogisticsProject: Project = {
     },
   },
 
+  overview: {
+    id: 'summary',
+    tabTitle: 'Resumen',
+    summary:
+      'Sistema de gestión de inventario y control de acceso para almacenes, compuesto por un panel web administrativo y una app móvil usada como credencial biométrica para operarios.',
+
+    objective:
+      'Reducir inconsistencias de stock en almacenes y prevenir suplantación de identidad en el registro de asistencia mediante autenticación biométrica ligada al dispositivo.',
+
+    duration: {
+      total: '2 semanas',
+      period: 'Mayo - Junio 2026',
+    },
+
+    roles: [
+      {
+        area: 'Monorepo Architecture',
+        description:
+          'Estructuración del proyecto en un monorepo con backend, web y mobile apps separadas, cada una con su entorno independiente de build y dependencias.',
+      },
+      {
+        area: 'Backend API',
+        description:
+          'Desarrollo de API REST con Node.js, Express y TypeScript. Implementación de transacciones atómicas con Prisma y control de acceso basado en roles (RBAC).',
+      },
+      {
+        area: 'Web Dashboard',
+        description:
+          'Construcción del panel administrativo en React y Vite. Módulo de gestión de inventario con validación en tiempo real y sincronización optimizada mediante TanStack Query.',
+      },
+      {
+        area: 'Mobile App',
+        description:
+          'Aplicación móvil en React Native (Expo) que funciona como credencial biométrica. Autenticación mediante huella dactilar y almacenamiento seguro en SecureStore.',
+      },
+      {
+        area: 'UX / Security',
+        description:
+          'Diseño del flujo de registro de dispositivos y auditoría de accesos biométricos con feedback visual inmediato sobre intentos de acceso inválidos.',
+      },
+    ],
+  },
+
   sections: [
     {
       id: 'backend',
@@ -59,6 +102,12 @@ export const techLogisticsProject: Project = {
       subtitle: 'Node.js + Express + Prisma ORM + PostgreSQL',
       description:
         'Arquitectura diseñada bajo tipado estricto encargada de orquestar la seguridad biométrica y la persistencia atómica del inventario.',
+      images: [
+        '/projects/techlogistics/techlogistics-backend-1.png',
+        '/projects/techlogistics/techlogistics-backend-2.png',
+        '/projects/techlogistics/techlogistics-backend-1.png',
+      ],
+      isMobileView: false,
       badges: [
         nodeJsSkill,
         typescriptSkill,
@@ -90,6 +139,12 @@ export const techLogisticsProject: Project = {
       subtitle: 'React 19 + React Router v7 + Zustand + TanStack Query',
       description:
         'Single Page Application (SPA) optimizada con React Compiler para el monitoreo IoT en tiempo real y la auditoría de accesos.',
+      images: [
+        '/projects/techlogistics/techlogistics-web-1.png',
+        '/projects/techlogistics/techlogistics-web-2.png',
+        '/projects/techlogistics/techlogistics-web-3.png',
+      ],
+      isMobileView: false,
       badges: [
         reactSkill,
         typescriptSkill,
@@ -121,6 +176,12 @@ export const techLogisticsProject: Project = {
       subtitle: 'Expo (SDK 56) + React Native + Hardware Binding',
       description:
         'Aplicación nativa diseñada para terminales de almacén que integra validaciones biométricas por hardware local.',
+      images: [
+        '/projects/techlogistics/techlogistics-app-1.jpeg',
+        '/projects/techlogistics/techlogistics-app-2.jpeg',
+        '/projects/techlogistics/techlogistics-app-3.jpeg',
+      ],
+      isMobileView: true,
       badges: [
         reactNativeSkill,
         typescriptSkill,
