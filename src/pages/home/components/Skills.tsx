@@ -1,23 +1,16 @@
 import { SectionTitle } from '@/components/SectionTitle';
-import {
-  primarySkills,
-  secondarySkills as secondarySkillsRaw,
-} from '@/constants/skills';
+import { primarySkills, secondarySkills } from '@/constants/skills';
 import { Brain } from 'lucide-react';
 import { SkillItem } from './SkillItem';
 import { SectionLayout } from '@/components/SectionLayout';
 import type { BaseSectionProps } from '@/types';
 
 export const Skills = ({ id }: BaseSectionProps) => {
-  const secondarySkills = secondarySkillsRaw.filter(
-    (skill) => skill.title !== 'PostgreSQL'
-  );
-
   return (
     <SectionLayout id={id}>
       <SectionTitle icon={Brain} text="Habilidades" />
 
-      <div className="flex w-full max-w-4xl flex-col items-center gap-12">
+      <div className="flex w-full max-w-4xl flex-col items-center gap-12 xl:max-w-7xl">
         {/* Primary Skills */}
         <div className="flex w-full flex-wrap items-center justify-center gap-8 md:gap-12">
           {primarySkills.map((skill) => (
@@ -26,7 +19,7 @@ export const Skills = ({ id }: BaseSectionProps) => {
         </div>
 
         {/* Secondary Skills */}
-        <div className="flex w-full max-w-4xl flex-wrap items-center justify-center gap-6 md:gap-8">
+        <div className="flex w-full max-w-4xl flex-wrap items-center justify-center gap-6 md:gap-8 xl:max-w-7xl">
           {secondarySkills.map((skill) => (
             <SkillItem key={skill.title} className="text-sm" skill={skill} />
           ))}

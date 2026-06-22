@@ -78,6 +78,18 @@ export const tailwindCssSkill: Skill = {
   iconColor: 'bg-[#06B6D4]',
 };
 
+export const expressSkill: Skill = {
+  title: 'Express.js',
+  src: '/svgs/express.svg',
+  iconColor: 'bg-[#E5E5E5]',
+};
+
+export const dockerSkill: Skill = {
+  title: 'Docker',
+  src: '/svgs/docker.svg',
+  iconColor: 'bg-[#2496ED]',
+};
+
 export const prismaSkill: Skill = {
   title: 'Prisma ORM',
   src: '/svgs/prisma.svg',
@@ -123,10 +135,10 @@ export const secondarySkills: Skill[] = [
   zustandSkill,
   axiosSkill,
   nodeJsSkill,
+  expressSkill,
   shadcnUiSkill,
   tailwindCssSkill,
   prismaSkill,
-  postgreSQLSkill,
 ];
 
 export const principlesList: Skill[] = [
