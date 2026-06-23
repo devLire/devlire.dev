@@ -72,7 +72,7 @@ export const OverviewTabContent = ({ project }: Props) => {
             <span className="mb-2.5 block font-mono text-[11px] font-bold tracking-wider text-zinc-500 uppercase">
               Tecnologías del Stack
             </span>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 gap-2 lg:grid-cols-3">
               {skills.map((badge) => (
                 <CustomBadge
                   key={badge.title}

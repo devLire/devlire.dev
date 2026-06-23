@@ -101,7 +101,7 @@ export const CustomTabs = ({ project }: Props) => {
               </div>
 
               {/* Badges */}
-              <div className="mt-auto grid shrink-0 grid-cols-3 gap-2 pt-2">
+              <div className="mt-auto grid shrink-0 grid-cols-2 gap-2 pt-2 lg:grid-cols-3">
                 {content.badges.map((badge) => (
                   <CustomBadge
                     key={badge.title}
