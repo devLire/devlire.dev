@@ -26,7 +26,7 @@ export const ProjectItem = ({ project, className }: Props) => {
       <CustomCard
         className={cn(
           'w-fit max-w-full p-2 transition-transform duration-300',
-          isScaled && 'scale-110'
+          isScaled && 'scale-105 md:scale-110'
         )}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
