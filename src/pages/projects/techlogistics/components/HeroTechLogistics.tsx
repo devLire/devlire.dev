@@ -121,10 +121,10 @@ export const HeroTechLogistics = ({ id }: BaseSectionProps) => {
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <span className="font-mono text-xs font-bold tracking-widest text-emerald-400 uppercase">
-                Ecosistema Completo
+                Backend | Web | Mobile
               </span>
               <h2 className="font-red-hat-display text-2xl leading-tight font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-                Arquitectura Monorepo para Control Logístico
+                Sistema Full-Stack de Inventario y Control de Accesos
               </h2>
             </div>
 
@@ -135,9 +135,9 @@ export const HeroTechLogistics = ({ id }: BaseSectionProps) => {
             </div>
 
             <p className="text-sm leading-relaxed text-zinc-400 md:text-base lg:text-lg">
-              Plataforma empresarial de alto rendimiento diseñada para la
-              automatización, gestión transaccional de inventarios y auditoría
-              biométrica de accesos de operarios.
+              Sistema full-stack de gestión logística que integra inventario,
+              control de accesos y autenticación biométrica móvil mediante una
+              plataforma unificada de backend, web y mobile.
             </p>
 
             <ProjectActions isProjectPage project={techLogisticsProject} />
