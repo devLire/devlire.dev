@@ -1,11 +1,11 @@
 import { HeroTechLogistics } from './components/HeroTechLogistics';
-import { TechLogisticsTabs } from './components/TechLogisticsTabs';
+import { ArchitectureTechLogistics } from './components/ArchitectureTechLogistics';
 
 const TechLogisticsPage = () => {
   return (
     <>
       <HeroTechLogistics id="hero" />
-      <TechLogisticsTabs id="tabs" />
+      <ArchitectureTechLogistics id="tabs" />
     </>
   );
 };
