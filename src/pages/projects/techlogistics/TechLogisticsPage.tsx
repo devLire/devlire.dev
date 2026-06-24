@@ -1,11 +1,15 @@
 import { HeroTechLogistics } from './components/HeroTechLogistics';
-import { TechLogisticsTabs } from './components/TechLogisticsTabs';
+import { ObjectivesTechLogistics } from './components/ObjectivesTechLogistics';
+import { WorkflowTechLogistics } from './components/WorkflowTechLogistics';
+import { ArchitectureTechLogistics } from './components/ArchitectureTechLogistics';
 
 const TechLogisticsPage = () => {
   return (
     <>
       <HeroTechLogistics id="hero" />
-      <TechLogisticsTabs id="tabs" />
+      <ObjectivesTechLogistics id="challenge" />
+      <WorkflowTechLogistics id="workflow" />
+      <ArchitectureTechLogistics id="tabs" />
     </>
   );
 };

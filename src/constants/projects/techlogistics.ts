@@ -17,10 +17,10 @@ import {
 
 export const techLogisticsProject: Project = {
   title:
-    'TechLogistics: Ecosistema Empresarial de Control Logístico y Seguridad Biométrica',
+    'TechLogistics: Sistema de Inventario y Control de Accesos Biométricos',
 
   description:
-    'Diseñé y construí un ecosistema empresarial completo. Programé una API RESTful con Node.js y transacciones atómicas en Prisma, un panel administrativo web en React con analíticas dinámicas, y un aplicativo móvil en Expo con biometría y bloqueo por hardware binding criptográfico.',
+    'Diseñé y construí una plataforma full-stack compuesta por una API RESTful con Node.js y Prisma, un panel administrativo en React y una aplicación móvil en Expo con autenticación biométrica y vinculación segura de dispositivos.',
 
   skills: [
     reactSkill,
@@ -89,7 +89,7 @@ export const techLogisticsProject: Project = {
       {
         area: 'UX / Security',
         description:
-          'Diseño del flujo de registro de dispositivos y auditoría de accesos biométricos con feedback visual inmediato sobre intentos de acceso inválidos.',
+          'Diseño del flujo de registro de dispositivos y auditoría de accesos biométricos con feedback visual sobre intentos de acceso inválidos.',
       },
     ],
   },
@@ -105,7 +105,6 @@ export const techLogisticsProject: Project = {
       images: [
         '/projects/techlogistics/techlogistics-backend-1.png',
         '/projects/techlogistics/techlogistics-backend-2.png',
-        '/projects/techlogistics/techlogistics-backend-1.png',
       ],
       isMobileView: false,
       badges: [
@@ -138,7 +137,7 @@ export const techLogisticsProject: Project = {
       title: 'Torre de Control Administrativa',
       subtitle: 'React 19 + React Router v7 + Zustand + TanStack Query',
       description:
-        'Single Page Application (SPA) optimizada con React Compiler para el monitoreo IoT en tiempo real y la auditoría de accesos.',
+        'Single Page Application (SPA) para monitoreo de inventario, gestión de usuarios y auditoría de accesos.',
       images: [
         '/projects/techlogistics/techlogistics-web-1.png',
         '/projects/techlogistics/techlogistics-web-2.png',
@@ -159,12 +158,12 @@ export const techLogisticsProject: Project = {
           desc: 'Protección de vistas mediante Route Guards síncronos que evalúan jerarquías de roles (Administrador, Supervisor, Operario).',
         },
         {
-          title: 'Terminal POS Logístico',
-          desc: 'Módulo interactivo con validación reactiva que bloquea físicamente la UI si se intentan despachar cantidades superiores al stock actual.',
+          title: 'Control Centralizado de Accesos',
+          desc: 'Administración de dispositivos autorizados, permisos de enrolamiento y métodos de autenticación desde un único panel web.',
         },
         {
-          title: 'Paralelismo de Datos',
-          desc: 'Ejecución concurrentes de múltiples queries analíticas vía TanStack Query para mitigar cuellos de botella en la renderización.',
+          title: 'Terminal POS Logístico',
+          desc: 'Módulo interactivo con validación reactiva que bloquea físicamente la UI si se intentan despachar cantidades superiores al stock actual.',
         },
       ],
     },
@@ -201,7 +200,7 @@ export const techLogisticsProject: Project = {
         },
         {
           title: 'Estrategia Anti-Caché',
-          desc: 'Manejo de cabeceras estrictas e inyección de timestamps para revalidar la sesión humana al milisegundo exacto frente a bloqueos remotos.',
+          desc: 'Manejo de cabeceras estrictas e inyección de timestamps para revalidar la sesión humana frente a bloqueos remotos.',
         },
       ],
     },
