@@ -6,7 +6,7 @@ export interface ProjectOverview {
   summary: string;
   objective: string;
   duration: {
-    total: string;
+    total?: string;
     period: string;
   };
   roles: {

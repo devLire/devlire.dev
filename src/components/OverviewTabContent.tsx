@@ -55,17 +55,19 @@ export const OverviewTabContent = ({ project }: Props) => {
                 <Calendar size={16} />
               </div>
               <div className="flex flex-col">
-                <span className="font-mono text-[10px] font-bold tracking-wider text-zinc-400 uppercase">
+                <span className="font-mono text-xs font-bold tracking-wider text-zinc-400 uppercase">
                   Desarrollo
                 </span>
-                <span className="font-mono text-xs font-semibold text-zinc-200">
+                <span className="font-mono text-sm font-semibold text-zinc-200">
                   {overview.duration.period}
                 </span>
               </div>
             </div>
-            <span className="font-red-hat-display text-lg font-bold text-[#00F5D4]">
-              {overview.duration.total}
-            </span>
+            {overview.duration.total && (
+              <span className="font-red-hat-display text-lg font-bold text-[#00F5D4]">
+                {overview.duration.total}
+              </span>
+            )}
           </div>
 
           <div>

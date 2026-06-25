@@ -61,7 +61,6 @@ export const techLogisticsProject: Project = {
       'Reducir inconsistencias de stock en almacenes y prevenir suplantación de identidad en el registro de asistencia mediante autenticación biométrica ligada al dispositivo.',
 
     duration: {
-      total: '2 semanas',
       period: 'Mayo - Junio 2026',
     },
 
