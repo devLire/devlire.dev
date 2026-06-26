@@ -270,7 +270,7 @@ export const useWorkflowTechLogistics = () => {
 
   const canvasOptions = {
     fitView: true,
-    fitViewOptions: { padding: 0.1, maxZoom: 1.15 },
+    fitViewOptions: { padding: 0.01, maxZoom: 1.15 },
     autoPanOnConnect: false,
     autoPanOnNodeDrag: false,
     elementsSelectable: false,

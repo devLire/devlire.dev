@@ -71,7 +71,7 @@ const AutoFitListener = () => {
     let t: ReturnType<typeof setTimeout>;
     const r = () => {
       clearTimeout(t);
-      t = setTimeout(() => fitView({ padding: 0.1, maxZoom: 1.15 }), 50);
+      t = setTimeout(() => fitView({ padding: 0.01, maxZoom: 1.15 }), 50);
     };
     window.addEventListener('resize', r);
     return () => {
@@ -90,9 +90,8 @@ export const WorkflowTechLogistics = ({ id }: BaseSectionProps) => {
     <SectionLayout id={id}>
       <SectionTitle icon={GitBranch} text="Flujo de la app" />
 
-      <div className="relative mt-8 h-[560px] w-full max-w-full overflow-hidden sm:h-[680px] md:h-[840px]">
+      <div className="relative mt-6 h-[620px] w-full max-w-full overflow-hidden sm:h-[780px] md:h-[1050px]">
         <div className="absolute inset-0 z-50 h-full w-full" />
-
         <ReactFlow
           edges={edges}
           nodeTypes={NODE_TYPES}
