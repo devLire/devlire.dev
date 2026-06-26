@@ -44,7 +44,7 @@ export const TechnicalDecisionRow = ({ technicalDecision }: Props) => {
         {technicalDecision.skill && (
           <div
             className={cn(
-              `absolute top-1/2 right-3 h-[3em] w-[3em] shrink-0 -translate-y-1/2 opacity-20 duration-700 ${technicalDecision.skill.iconColor}`,
+              `absolute top-1/2 right-3 h-[2.7em] w-[2.7em] shrink-0 -translate-y-1/2 opacity-20 duration-700 lg:h-[3em] lg:w-[3em] ${technicalDecision.skill.iconColor}`,
               isScaled && 'opacity-100'
             )}
             style={{
@@ -62,7 +62,7 @@ export const TechnicalDecisionRow = ({ technicalDecision }: Props) => {
       </div>
 
       {/* Columna Derecha */}
-      <div className="flex items-center border-t border-white/20 p-1 text-sm text-white/70 lg:border-t-0 lg:border-l">
+      <div className="flex items-center border-t border-white/20 p-1 px-4 text-sm text-white/70 lg:border-t-0 lg:border-l">
         <p>{technicalDecision.reason}</p>
       </div>
     </CustomCard>
