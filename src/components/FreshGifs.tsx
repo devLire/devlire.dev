@@ -8,7 +8,7 @@ interface FreshGifProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   tick?: number;
 }
 
-export const FreshGif = ({ src, tick = 0, ...props }: FreshGifProps) => {
+export const FreshGif = ({ src, alt, tick = 0, ...props }: FreshGifProps) => {
   const [currentSrc, setCurrentSrc] = useState('');
 
   useEffect(() => {
@@ -62,5 +62,5 @@ export const FreshGif = ({ src, tick = 0, ...props }: FreshGifProps) => {
       <div className={props.className} style={{ backgroundColor: '#18181b' }} />
     );
   }
-  return <img src={currentSrc} {...props} />;
+  return <img src={currentSrc} {...props} alt={alt} />;
 };

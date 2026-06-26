@@ -1,6 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { Cpu } from 'lucide-react';
-import { motion, AnimatePresence, type Variants } from 'framer-motion';
+import {
+  motion,
+  AnimatePresence,
+  type Variants,
+  useReducedMotion,
+} from 'framer-motion';
 import { CustomBadge } from '@/components/CustomBadge';
 import { SectionLayout } from '@/components/SectionLayout';
 import { SectionTitle } from '@/components/SectionTitle';
@@ -52,6 +57,27 @@ const SLIDES_DATA = [
 
 export const HeroTechLogistics = ({ id }: BaseSectionProps) => {
   const [api, setApi] = useState<CarouselApi>();
+  const shouldReduceMotion = useReducedMotion();
+
+  const customVariants: Variants = {
+    enter: (direction: number) => ({
+      x: shouldReduceMotion ? 0 : direction > 0 ? '100%' : '-100%',
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.7, ease: [0.25, 1, 0.5, 1] },
+    },
+    exit: (direction: number) => ({
+      x: shouldReduceMotion ? 0 : direction > 0 ? '-80%' : '80%',
+      opacity: 0,
+      transition: {
+        x: { duration: 0.7, ease: [0.25, 1, 0.5, 1] },
+        opacity: { duration: 0.35, ease: 'easeOut' },
+      },
+    }),
+  };
 
   const [{ page, direction, tick }, setCarouselState] = useState({
     page: 0,
@@ -76,10 +102,14 @@ export const HeroTechLogistics = ({ id }: BaseSectionProps) => {
       }));
     };
 
-    syncState();
+    const rafId = requestAnimationFrame(() => {
+      syncState();
+    });
+
     api.on('select', syncState);
 
     return () => {
+      cancelAnimationFrame(rafId);
       api.off('select', syncState);
     };
   }, [api]);
@@ -186,7 +216,7 @@ export const HeroTechLogistics = ({ id }: BaseSectionProps) => {
                       custom={direction}
                       exit="exit"
                       initial="enter"
-                      variants={slideVariants}
+                      variants={customVariants}
                     >
                       {slide.id === 'app' ? (
                         <FreshGif
