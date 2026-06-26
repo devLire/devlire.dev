@@ -15,15 +15,15 @@ export const CustomFooter = () => {
   };
 
   return (
-    <footer className="relative overflow-hidden border-t border-emerald-900/50 bg-emerald-950 font-sans text-gray-400">
+    <footer className="relative overflow-hidden border-t border-emerald-900/50 bg-emerald-950 font-sans text-white">
       <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           {/* COLUMNA 1: Resumen */}
           <div className="flex flex-col space-y-6 lg:col-span-4">
-            <div className="flex animate-pulse cursor-default items-center justify-center gap-3 text-6xl text-white">
+            <div className="flex animate-pulse cursor-default items-center justify-center gap-3 text-6xl">
               <DevLire />
             </div>
-            <p className="max-w-sm text-sm leading-relaxed text-gray-400">
+            <p className="max-w-sm text-sm leading-relaxed">
               Desarrollador{' '}
               <span className="font-medium text-emerald-500">Frontend</span>{' '}
               enfocado en construir aplicaciones web y móviles{' '}
@@ -39,7 +39,7 @@ export const CustomFooter = () => {
 
           {/* COLUMNA 2: EXPLORAR */}
           <div className="lg:col-span-3">
-            <h3 className="mb-6 flex items-center gap-2 text-sm font-semibold tracking-wide text-white uppercase">
+            <h3 className="mb-6 flex items-center gap-2 text-sm font-semibold tracking-wide uppercase">
               Explorar
             </h3>
             <ul className="space-y-3">
@@ -49,6 +49,7 @@ export const CustomFooter = () => {
                     <div className="space-y-1">
                       <button
                         className="group flex w-full cursor-pointer items-center justify-between text-left text-sm font-medium text-emerald-200/80 transition-colors hover:text-emerald-400"
+                        type="button"
                         onClick={() => toggleSection(link.text)}
                       >
                         {link.text}
@@ -97,7 +98,7 @@ export const CustomFooter = () => {
 
           {/* COLUMNA 3: Tecnologías */}
           <div className="lg:col-span-2">
-            <h3 className="mb-6 text-sm font-semibold tracking-wide text-white uppercase">
+            <h3 className="mb-6 text-sm font-semibold tracking-wide uppercase">
               Tecnologías
             </h3>
             <ul className="space-y-3">
@@ -116,7 +117,7 @@ export const CustomFooter = () => {
 
           {/* COLUMNA 4: CONTACTO */}
           <div className="lg:col-span-3">
-            <h3 className="mb-6 text-sm font-semibold tracking-wide text-white uppercase">
+            <h3 className="mb-6 text-sm font-semibold tracking-wide uppercase">
               Contáctame
             </h3>
 

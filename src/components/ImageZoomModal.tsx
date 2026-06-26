@@ -19,7 +19,10 @@ export const ImageZoomModal = ({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="group relative flex h-full w-full cursor-zoom-in items-center justify-center outline-none">
+        <button
+          className="group relative flex h-full w-full cursor-zoom-in items-center justify-center outline-none"
+          type="button"
+        >
           {isMobileView ? (
             <div className="relative aspect-[9/16] h-full max-h-[340px] shrink-0 overflow-hidden rounded-[20px] border-[4px] border-zinc-800 bg-black shadow-2xl transition-transform duration-300 group-hover:scale-[1.01]">
               <img alt={alt} className="h-full w-full object-cover" src={src} />
